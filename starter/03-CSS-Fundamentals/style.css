@@ -1,11 +1,50 @@
 /* Universal(*) 會選擇所有元素，但不會被繼承。 */
 * {
-  background-color: pink;
+  /* background-color: pink; */
+  margin: 0;
+  padding: 0;
 }
 
 body {
   color: #444;
   font-family: sans-serif;
+
+  border-top: 10px solid #1098ad;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  /* shorthand
+  first value for top and bottom
+  second value for left and right */
+  padding: 20px 40px;
+  margin-bottom: 60px;
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  /* border是一個接受多個值的屬性，依序為width、style與color */
+  /* border: 5px solid #1098ad;  */
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  padding: 50px 0;
 }
 
 h1,
@@ -22,10 +61,15 @@ h1 {
 
 h2 {
   font-size: 40px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  /* 兩個相鄰元素各自設定的margin是會相交的，而不是相加，稱為margin collapse
+  在這個例子可以觀察h3和p的margin實際上的狀況 */
 }
 
 h4 {
@@ -37,11 +81,31 @@ h4 {
 p {
   font-size: 22px;
   line-height: 1.5; /* 沒有單位，代表行高為字體大小x1.5 */
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 li {
   font-size: 20px;
+  margin-bottom: 10px;
 }
+/* .first-li {
+  font-weight: bold;
+} */
+/* 可以用psudo-class讓css幫我們找出符合條件的元件 */
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  margin-bottom: 0px;
+}
+
 /* 設定footer中的p的樣式 */
 /* footer p {
   font-size: 16px;
@@ -70,30 +134,6 @@ li {
 
 .related-list {
   list-style: none;
-}
-
-.main-header {
-  background-color: #f7f7f7;
-}
-
-aside {
-  background-color: #f7f7f7;
-  /* border是一個接受多個值的屬性，依序為width、style與color */
-  /* border: 5px solid #1098ad;  */
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
-}
-
-/* .first-li {
-  font-weight: bold;
-} */
-/* 可以用psudo-class讓css幫我們找出符合條件的元件 */
-li:first-child {
-  font-weight: bold;
-}
-
-li:last-child {
-  font-style: italic;
 }
 
 /* li:nth-child(odd) {
@@ -139,8 +179,4 @@ a:active {
 }
 footer p {
   color: green;
-}
-
-nav {
-  font-size: 18px;
 }
