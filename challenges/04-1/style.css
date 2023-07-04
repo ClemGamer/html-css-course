@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.product {
+  font-family: sans-serif;
+
+  border: 4px solid black;
+  width: 825px;
+  margin: 60px auto;
+  position: relative;
+}
+
+.product::before {
+  position: absolute;
+  display: inline-block;
+  content: "SALE";
+  color: #fff;
+  background-color: rgb(230, 88, 0);
+  padding: 8px 15px;
+  top: -16px;
+  left: -38px;
+
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.product-colors {
+  margin-bottom: 35px;
+}
+.color {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  margin-right: 4px;
+  background-color: #000;
+}
+.color-blue {
+  background-color: rgb(59, 59, 245);
+}
+.color-red {
+  background-color: rgb(245, 75, 59);
+}
+.color-yellow {
+  background-color: rgb(245, 211, 59);
+}
+.color-green {
+  background-color: rgb(121, 245, 59);
+}
+.color-brown {
+  background-color: rgb(172, 80, 0);
+}
+.product .color:last-child {
+  margin-right: 0;
+}
+
+h2,
+h3,
+button {
+  text-transform: uppercase;
+}
+
+.product-name {
+  background-color: rgba(255, 229, 244, 0.801);
+  text-align: center;
+  font-size: 22px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.product-img {
+  margin-bottom: 5px;
+}
+
+.product-prices {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.shipping-prices {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-description {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+a:link,
+a:visited {
+  color: black;
+  text-decoration: underline;
+  margin-bottom: 35px;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.product-details-title {
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 6px;
+}
+
+li {
+  list-style: square;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.add-to-cart {
+  background-color: black;
+  color: white;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  width: 100%;
+  padding: 16px;
+
+  border: none;
+  border-top: 4px solid black;
+}
+.add-to-cart:hover {
+  background-color: white;
+  color: black;
+}
