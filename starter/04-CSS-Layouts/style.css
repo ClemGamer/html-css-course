@@ -197,7 +197,6 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 }
 
@@ -267,6 +266,7 @@ nav p {
 } */
 
 /* FLOATS */
+/* 
 .author-img {
   float: left;
   margin-bottom: 20px;
@@ -284,14 +284,16 @@ h1 {
 
 nav {
   float: right;
-}
+} 
+*/
 
 /* 修正因為子元素用float而out of flow，導致的container高度歸零，但這做法會讓非常多地方都需要插入這種code，所以不是個好方法 */
-/* .clear {
+/* 
+.clear {
   clear: both;
 } */
 /* 用psudo-element可以在class="clearfix"的元素都自動加上clear */
-.clearfix::after {
+/* .clearfix::after {
   clear: both;
   content: "";
   display: block;
@@ -308,4 +310,67 @@ aside {
 footer {
   background-color: yellow;
   clear: both;
+} 
+*/
+
+/* FLEX BOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.row {
+  display: flex;
+  gap: 75px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+article {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+aside {
+  /*
+  DEFAULTS:
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  */
+  flex: 0 0 300px;
 }
