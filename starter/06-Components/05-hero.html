@@ -29,9 +29,18 @@
       }
 
       header {
-        background-color: orangered;
+        /* background-color: orangered; */
         /* 100vh: the 100% height of the viewport */
         height: 100vh;
+        position: relative;
+        /* stack multiple background images */
+        background-image: linear-gradient(
+            rgba(34, 34, 34, 0.6),
+            rgba(34, 34, 34, 0.6)
+          ),
+          url(hero.jpg);
+        background-size: cover;
+        color: #fff;
       }
 
       nav {
@@ -39,12 +48,34 @@
         font-weight: 700;
         display: flex;
         justify-content: space-between;
-        background-color: green;
+        padding-top: 32px;
+        /* background-color: green; */
+        /* background-image: linear-gradient(to right, red, blue); */
+      }
+
+      .header-container {
+        width: 1200px;
+        position: absolute;
+
+        /* In relation to PARENT size */
+        left: 50%;
+        top: 50%;
+        /* In relation to ELEMENT size */
+        transform: translate(-50%, -50%);
+        /* background-color: aqua; */
+
+        /* text-align: center; */
+      }
+
+      .header-container-inner {
+        width: 50%;
+        /* background-color: violet; */
       }
 
       h1 {
         font-size: 52px;
         margin-bottom: 32px;
+        line-height: 1.05;
       }
 
       p {
@@ -82,13 +113,16 @@
         <div>LOGO</div>
         <div>NAVIGATION</div>
       </nav>
-      <div class="container">
-        <h1>A healty meal delivered to your door, every single day</h1>
-        <p>
-          The smart 365-days-per-year food subscription that will make you eat
-          healty again. Tailored to your personal tastes and nutritional needs.
-        </p>
-        <a href="#" class="btn">Smart eating well</a>
+      <div class="header-container">
+        <div class="header-container-inner">
+          <h1>A healty meal delivered to your door, every single day</h1>
+          <p>
+            The smart 365-days-per-year food subscription that will make you eat
+            healty again. Tailored to your personal tastes and nutritional
+            needs.
+          </p>
+          <a href="#" class="btn">Smart eating well</a>
+        </div>
       </div>
     </header>
     <section>
